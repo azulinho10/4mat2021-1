@@ -12,7 +12,7 @@ console.log(Math.max(...numeros)) //Retorna o maior número da lista
 // console.log(maisNumeros)
 
 // Usar o espalhamento
- let maisNumeros = [19, 7, 38, ...numeros, 0, 5]
+let maisNumeros = [19, 7, 38, ...numeros, 0, -5]
 console.log(maisNumeros)
 
 //Usar o espalhamento em parâmetosde função (parametro de resto)
@@ -28,7 +28,7 @@ console.log(somaTudo(14, 56, 78, 0, -4, 41)) // Quantidade de números é aletó
 console.log(somaTudo(25, -7, 14))
 
 function calcular(oper, ...nums){
-
+    let res
     switch(oper){
         case '+':
             res = 0
@@ -49,4 +49,5 @@ console.log(calcular('*', 15, 19, 12, 32, -7, 6))
 console.log(somaTudo(...maisNumeros))
 
 //Chamando calcular() de forma semelhante
-console.log(somaTudo('*',...maisNumeros))
+console.log(calcular('+',...maisNumeros))
+
